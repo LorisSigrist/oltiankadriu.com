@@ -1,0 +1,39 @@
+import Link from "next/link";
+import { LucideIcon } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { cn, isExternalLink } from "@/lib/utils";
+
+interface NavigationLinkProps {
+  href: string;
+  label: string;
+  icon: LucideIcon;
+  size?: number;
+}
+
+export function NavigationLink({
+  href,
+  label,
+  icon: Icon,
+  size,
+}: NavigationLinkProps) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+  const isExternal = isExternalLink(href);
+
+  return (
+    <Link
+      key={href}
+      href={href}
+      className={cn(
+        "group flex items-center justify-between rounded-lg p-2",
+        isActive ? "bg-accent" : "hover:bg-accent hover:text-accent-foreground"
+      )}
+      {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+    >
+      <span className="flex items-center gap-2">
+        <Icon size={size} />
+        <span className="font-medium">{label}</span>
+      </span>
+    </Link>
+  );
+}
