@@ -28,7 +28,7 @@ export const Navbar = () => {
   }, [pathname]);
 
   return (
-    <nav className="container">
+    <nav className="content">
       <div className="flex items-center justify-between py-4 z-50">
         <Link
           className="rounded hover:bg-accent hover:text-accent-foreground inline-flex items-center gap-2 p-2"
@@ -124,7 +124,7 @@ export const Navbar = () => {
           </DrawerContent>
         </Drawer>
 
-        <div className="hidden md:flex md:gap-4 w-full md:w-auto">
+        <div className="hidden md:flex md:gap-4 w-full md:w-auto items-center">
           <ul className="flex flex-row font-medium rounded-lg md:space-x-4 rtl:space-x-reverse mt-0 border-0">
             {LINKS.map(
               (link, index) =>

@@ -87,3 +87,11 @@ hr {
   -webkit-backdrop-filter: saturate(180%) blur(5px);
   backdrop-filter: saturate(180%) blur(5px);
 }
+
+.content {
+  @apply w-full max-w-screen-lg mx-auto md:px-10 px-6 py-8 space-y-16;
+}
+
+nav.content {
+  @apply w-full max-w-screen-lg mx-auto md:px-10 px-6 py-0 space-y-16;
+}
