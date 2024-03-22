@@ -4,6 +4,7 @@ import { sharedTitle, sharedDescription } from "@/app/shared-metadata";
 import { Navbar } from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 const rethinksans = Rethink_Sans({ subsets: ["latin"] });
 
@@ -56,6 +57,7 @@ export default function RootLayout({
             <Navbar />
           </header>
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

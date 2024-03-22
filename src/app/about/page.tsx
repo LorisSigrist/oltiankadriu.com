@@ -18,7 +18,7 @@ export default function About() {
             alt="Profile Picture"
             width={160}
             height={160}
-            className="absolute left-0 -bottom-[64px] z-10 rounded-full aspect-square size-40 border-4 border-white"
+            className="absolute left-0 -bottom-[64px] z-10 rounded-full aspect-square size-40 border-4 border-[#d9d9d9] dark:border-[#3a3a3a]"
           />
           <Image
             src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

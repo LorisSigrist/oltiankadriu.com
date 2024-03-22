@@ -98,6 +98,38 @@ hr {
   @apply w-full max-w-screen-lg mx-auto md:px-10 px-6 py-8 space-y-16;
 }
 
+main.content {
+  @apply w-full max-w-screen-lg mx-auto md:px-10 px-6 pb-[120px] pt-8;
+}
+
 nav.content {
   @apply w-full max-w-screen-lg mx-auto md:px-10 px-6 py-0 space-y-16;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.dark ::selection {
+  background-color: #303374;
+}
+
+.light ::selection {
+  background-color: #cbcdff;
+}
+
+.gray {
+
+  --gray-6: #d9d9d9;
+}
+
+
+.grayDark {
+  --gray-6: #3a3a3a;
 }
