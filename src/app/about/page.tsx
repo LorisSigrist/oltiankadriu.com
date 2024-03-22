@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className="content">
+    <main className="content text-gray-1100">
       <section className="w-full">
         <div className="relative mb-24">
           <Image
@@ -30,14 +30,16 @@ export default function About() {
         </div>
 
         <div>
-          <span className="text-3xl font-semibold">Oltian Kadriu</span>
+          <span className="text-3xl font-semibold text-gray-1200">
+            Oltian Kadriu
+          </span>
           <div className="text-xl font-semibold">@oltiankadriu</div>
         </div>
       </section>
 
       <section>
-        <h1 className="text-3xl font-semibold mb-4">About me</h1>
-        <p className="text-zinc-500 dark:text-zinc-400">
+        <h1 className="text-3xl font-semibold mb-4 text-gray-1200">About me</h1>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, illo
           alias? Quo nobis autem dolores eius. Excepturi eius necessitatibus rem
           tempora dignissimos qui fuga incidunt modi? Error dolor ratione aut?
@@ -52,7 +54,9 @@ export default function About() {
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold mb-4">Experience</h2>
+        <h2 className="text-xl font-semibold mb-4 text-gray-1200">
+          Experience
+        </h2>
 
         {EXPERIENCES.map((experience, index) => (
           <div key={index}>
@@ -60,7 +64,7 @@ export default function About() {
               <p>
                 {experience.position} at{" "}
                 <Link
-                  className="text-black transition-colors dark:text-white underline hover:no-underline underline-offset-2 font-medium"
+                  className="underline hover:text-gray-1200 underline-offset-2 font-medium"
                   href={experience.companyUrl}
                   {...(isExternalLink(experience.companyUrl)
                     ? { target: "_blank", rel: "noopener noreferrer" }
@@ -78,20 +82,16 @@ export default function About() {
                 <span className="text-green-600">Now</span>
               )}
             </p>
-            {experience.description ? (
-              <p className="text-zinc-500 dark:text-zinc-400">
-                {experience.description}
-              </p>
-            ) : null}
+            {experience.description ? <p>{experience.description}</p> : null}
             {index !== EXPERIENCES.length - 1 && (
-              <div className="border-b border-b-zinc-100 my-4 dark:border-b-zinc-900"></div>
+              <div className="border-b border-b-zinc-100 my-4 dark:border-b-zinc-900" />
             )}
           </div>
         ))}
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold mb-4">Education</h2>
+        <h2 className="text-xl font-semibold mb-4 text-gray-1200">Education</h2>
 
         {EDUCATIONS.map((education, index) => (
           <div key={index}>
@@ -99,7 +99,7 @@ export default function About() {
               <p>
                 {education.schoolType} at{" "}
                 <Link
-                  className="text-black transition-colors dark:text-white underline hover:no-underline underline-offset-2 font-medium"
+                  className="underline hover:text-gray-1200 underline-offset-2 font-medium"
                   href={education.schoolUrl}
                   {...(isExternalLink(education.schoolUrl)
                     ? { target: "_blank", rel: "noopener noreferrer" }
@@ -117,13 +117,9 @@ export default function About() {
                 <span className="text-green-600">Now</span>
               )}
             </p>
-            {education.description ? (
-              <p className="text-zinc-500 dark:text-zinc-400">
-                {education.description}
-              </p>
-            ) : null}
+            {education.description ? <p>{education.description}</p> : null}
             {index !== EDUCATIONS.length - 1 && (
-              <div className="border-b border-b-zinc-100 my-4 dark:border-b-zinc-900"></div>
+              <div className="border-b border-b-zinc-100 my-4 dark:border-b-zinc-900" />
             )}
           </div>
         ))}

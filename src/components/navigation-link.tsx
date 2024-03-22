@@ -25,8 +25,8 @@ export function NavigationLink({
       key={href}
       href={href}
       className={cn(
-        "group flex items-center justify-between rounded-lg p-2",
-        isActive ? "bg-accent" : "hover:bg-accent hover:text-accent-foreground"
+        "group flex items-center justify-between rounded-lg p-2 text-gray-1200",
+        isActive ? "bg-accent" : "hover:bg-accent"
       )}
       {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >

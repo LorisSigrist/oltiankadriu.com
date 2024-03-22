@@ -28,10 +28,10 @@ export const Navbar = () => {
   }, [pathname]);
 
   return (
-    <nav className="content">
+    <nav className="content text-gray-1200">
       <div className="flex items-center justify-between py-4 z-50">
         <Link
-          className="rounded hover:bg-accent hover:text-accent-foreground inline-flex items-center gap-2 p-2"
+          className="rounded hover:bg-accent inline-flex items-center gap-2 p-2"
           href="/"
         >
           <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full shadow-sm hidden md:flex">
@@ -46,23 +46,23 @@ export const Navbar = () => {
           </span>
 
           <div className="flex flex-col">
-            <span className="font-semibold text-base tracking-tight">
-              Oltian Kadriu
+            <span className="font-semibold tracking-tight">Oltian Kadriu</span>
+            <span className="text-sm hidden md:block text-gray-1100">
+              Web Developer
             </span>
-            <span className="text-sm hidden md:block">Web Developer</span>
           </div>
         </Link>
 
         <Drawer open={open} onOpenChange={setOpen}>
           <div className="block md:hidden">
-            <DrawerTrigger className="hover:bg-accent hover:text-accent-foreground p-2 rounded">
+            <DrawerTrigger className="hover:bg-accent p-2 rounded">
               <Menu />
             </DrawerTrigger>
           </div>
           <DrawerContent className="focus:outline-none p-4">
             <div className="flex flex-col gap-4 text-sm">
               <Link
-                className="rounded hover:bg-accent hover:text-accent-foreground inline-flex items-center gap-2 p-2"
+                className="rounded hover:bg-accent inline-flex items-center gap-2 p-2"
                 href="/"
               >
                 <span className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full border shadow-sm">
@@ -77,10 +77,10 @@ export const Navbar = () => {
                 </span>
 
                 <div className="flex flex-col">
-                  <span className="font-semibold text-base tracking-tight">
+                  <span className="font-semibold tracking-tight text-gray-1200">
                     Oltian Kadriu
                   </span>
-                  <span>Web Developer</span>
+                  <span className="text-gray-1100">Web Developer</span>
                 </div>
               </Link>
 
@@ -102,7 +102,7 @@ export const Navbar = () => {
             <hr />
 
             <div className="flex flex-col gap-2 text-sm">
-              <span className="px-2 text-xs font-medium leading-relaxed text-gray-600">
+              <span className="px-2 text-xs font-medium leading-relaxed text-gray-1100">
                 Online
               </span>
               <div>
