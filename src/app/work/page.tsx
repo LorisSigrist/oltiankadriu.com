@@ -1,6 +1,5 @@
-import { EDUCATIONS, EXPERIENCES, PROJECTS } from "@/lib/constants";
-import { isExternalLink } from "@/lib/utils";
-import { Link2 } from "lucide-react";
+import { PROJECTS } from "@/lib/constants";
+import { MoveRight } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,12 +25,12 @@ export default function Work() {
               <div className="p-8 text-gray-1200">
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="text-2xl font-semibold">{project.title}</h3>
+                    <h2 className="text-2xl font-semibold">{project.title}</h2>
                     <Link
-                      className="flex justify-between gap-5 bg-muted-foreground py-2 px-3 items-center rounded-2xl"
+                      className="flex justify-between gap-3 py-2 px-3 items-center rounded-2xl hover:underline text-sm"
                       href={`/work/${project.slug}`}
                     >
-                      www <Link2 size={16} />
+                      Read More <MoveRight />
                     </Link>
                   </div>
                   <p className="text-gray-1100">{project.shortDescription}</p>
@@ -42,7 +41,7 @@ export default function Work() {
                 alt={project.title}
                 width={456}
                 height={228}
-                className="w-full"
+                className="w-full animate-reveal"
               />
             </article>
           ))}

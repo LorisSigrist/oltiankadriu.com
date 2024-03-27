@@ -53,7 +53,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="sticky top-0 z-40 blur-effect border-b">
+          <header className="sticky top-0 z-40 border-b bg-background">
             <Navbar />
           </header>
           {children}

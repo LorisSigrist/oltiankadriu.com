@@ -25,7 +25,7 @@ export default function About() {
             alt="Banner Image"
             width={944}
             height={300}
-            className="relative rounded-xl object-cover h-[235px] md:h-[300px] aspect-video"
+            className="relative rounded-xl object-cover h-[235px] md:h-[300px] aspect-video animate-reveal"
           />
         </div>
 

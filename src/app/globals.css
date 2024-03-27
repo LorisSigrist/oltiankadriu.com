@@ -89,11 +89,6 @@ hr {
   @apply my-6 border-gray-200;
 }
 
-.blur-effect {
-  -webkit-backdrop-filter: saturate(180%) blur(5px);
-  backdrop-filter: saturate(180%) blur(5px);
-}
-
 .content {
   @apply w-full max-w-screen-lg mx-auto md:px-10 px-6 py-8 space-y-16;
 }
@@ -122,14 +117,4 @@ footer {
 
 .light ::selection {
   background-color: #cbcdff;
-}
-
-.gray {
-
-  --gray-6: #d9d9d9;
-}
-
-
-.grayDark {
-  --gray-6: #3a3a3a;
 }

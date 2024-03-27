@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Link2 } from "lucide-react";
+import { MoveRight } from "lucide-react";
 import { PROJECTS } from "@/lib/constants";
 
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full" id="work">
+      <section className="w-full">
         <div className="flex gap-4 items-center mb-8">
           <h2 className="font-medium text-lg text-gray-1100 flex-shrink-0">
             Selected work
@@ -46,10 +46,10 @@ export default function Home() {
                         {project.title}
                       </h3>
                       <Link
-                        className="flex justify-between gap-5 bg-muted-foreground py-2 px-3 items-center rounded-2xl"
+                        className="flex justify-between gap-3 py-2 px-3 items-center rounded-2xl hover:underline text-sm"
                         href={`/work/${project.slug}`}
                       >
-                        www <Link2 size={16} />
+                        Read More <MoveRight />
                       </Link>
                     </div>
                     <p className="text-gray-1100">{project.shortDescription}</p>
@@ -60,7 +60,7 @@ export default function Home() {
                   alt={project.title}
                   width={456}
                   height={228}
-                  className="w-full"
+                  className="w-full animate-reveal"
                 />
               </article>
             )
