@@ -45,6 +45,19 @@ interface Education {
   description?: string;
 }
 
+interface Project {
+  title: string;
+  shortDescription: string;
+  slug: string;
+  description: string;
+  year: string;
+  collaborators?: { name: string; link: string }[];
+  websiteLink?: string;
+  githubRepoLink?: string;
+  images: string[];
+  isSelected?: boolean;
+}
+
 export const LINKS: Link[] = [
   {
     href: "/",
@@ -61,12 +74,6 @@ export const LINKS: Link[] = [
   {
     href: "/about",
     label: "About",
-    icon: UserRound,
-    size: 16,
-  },
-  {
-    href: "/contact",
-    label: "Contact",
     icon: UserRound,
     size: 16,
   },
@@ -127,5 +134,41 @@ export const EDUCATIONS: Education[] = [
     endDate: "07 / 2023",
     description:
       "Computer scientist application development EFZ + vocational baccalaureate.",
+  },
+];
+
+export const PROJECTS: Project[] = [
+  {
+    title: "Example Project",
+    shortDescription: "This is an example project.",
+    slug: "example-project",
+    description: "Detailed description of the example project.",
+    year: "2022",
+    collaborators: [
+      { name: "John Doe", link: "https://example.com/john-doe" },
+      { name: "Jane Smith", link: "https://example.com/jane-smith" },
+    ],
+    websiteLink: "https://example.com",
+    githubRepoLink: "https://github.com/example/example-project",
+    images: [
+      "/images/work/testcompany/testproject.png",
+      "https://example.com/image2.jpg",
+    ],
+    isSelected: true,
+  },
+  {
+    title: "Example Project2",
+    shortDescription: "This is an example project2.",
+    slug: "example-project2",
+    description: "Detailed description of the example project2.",
+    year: "2024",
+    collaborators: [],
+    websiteLink: "https://example.com",
+    githubRepoLink: "https://github.com/example/example-project",
+    images: [
+      "/images/work/testcompany/testproject.png",
+      "https://example.com/image2.jpg",
+    ],
+    isSelected: true,
   },
 ];
