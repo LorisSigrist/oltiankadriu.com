@@ -47,7 +47,7 @@ export default function Home() {
                       </h3>
                       <Link
                         className="flex justify-between gap-5 bg-muted-foreground py-2 px-3 items-center rounded-2xl"
-                        href="#"
+                        href={`/work/${project.slug}`}
                       >
                         www <Link2 size={16} />
                       </Link>
