@@ -8,6 +8,7 @@ import {
   Linkedin,
 } from "lucide-react";
 import { LucideIcon } from "lucide-react";
+import * as m from "@/paraglide/messages.js";
 
 interface Link {
   href: string;
@@ -61,19 +62,19 @@ interface Project {
 export const LINKS: Link[] = [
   {
     href: "/",
-    label: "Home",
+    label: m.home_title(),
     icon: Sparkles,
     size: 16,
   },
   {
     href: "/work",
-    label: "Work",
+    label: "Test",
     icon: Layers,
     size: 16,
   },
   {
     href: "/about",
-    label: "About",
+    label: m.about_title(),
     icon: UserRound,
     size: 16,
   },

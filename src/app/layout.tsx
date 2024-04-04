@@ -5,6 +5,8 @@ import { Navbar } from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Footer from "@/components/footer";
+import { LanguageProvider } from "@inlang/paraglide-js-adapter-next";
+import { languageTag } from "@/paraglide/runtime";
 
 const rethinksans = Rethink_Sans({ subsets: ["latin"] });
 
@@ -45,21 +47,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={rethinksans.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <header className="sticky top-0 z-40 border-b bg-background">
-            <Navbar />
-          </header>
-          {children}
-          <Footer />
-        </ThemeProvider>
-      </body>
-    </html>
+    <LanguageProvider>
+      <html lang={languageTag()} suppressHydrationWarning>
+        <body className={rethinksans.className}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <header className="sticky top-0 z-40 border-b bg-background">
+              <Navbar />
+            </header>
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </body>
+      </html>
+    </LanguageProvider>
   );
 }

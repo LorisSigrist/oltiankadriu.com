@@ -1,6 +1,6 @@
 import { LINKS, PROFILES } from "@/lib/constants";
 import { isExternalLink } from "@/lib/utils";
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
 import React from "react";
 
 function Footer() {

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "home_title": "Home",
+  "home_description": "Welcome to the home page!",
+  "about_title": "About",
+  "about_description": "Learn more about us!",
+  "work_title": "Work",
+  "work_description": "Check out our work!"
+}

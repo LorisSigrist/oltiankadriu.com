@@ -1,7 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
 import { MoveRight } from "lucide-react";
 import { PROJECTS } from "@/lib/constants";
+import * as m from "@/paraglide/messages.js";
 
 export default function Home() {
   return (

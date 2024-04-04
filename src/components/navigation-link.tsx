@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { LucideIcon } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/lib/i18n";
 import { cn, isExternalLink } from "@/lib/utils";
 
 interface NavigationLinkProps {
@@ -24,6 +23,7 @@ export function NavigationLink({
     <Link
       key={href}
       href={href}
+      suppressHydrationWarning
       className={cn(
         "group flex items-center justify-between rounded-lg p-2 text-gray-1200",
         isActive ? "bg-accent" : "hover:bg-accent"

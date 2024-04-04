@@ -1,23 +1,14 @@
 "use client";
 
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import Image from "next/image";
 import { LINKS, PROFILES } from "@/lib/constants";
-import Link from "next/link";
+import { Link, usePathname } from "@/lib/i18n";
 import { NavigationLink } from "@/components/navigation-link";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import { ThemeToggler } from "@/components/theme-toggler";
 import { Menu } from "lucide-react";
+import { SelectLanguage } from "./language-switcher";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -142,6 +133,7 @@ export const Navbar = () => {
             )}
           </ul>
           <ThemeToggler />
+          <SelectLanguage />
         </div>
       </div>
     </nav>
